@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.dailyhabittracker.data.models.Habit
 import com.example.dailyhabittracker.logic.dao.HabitDao
 
-@Database(entities = [Habit::class], version = 1, exportSchema = false)
+@Database(entities = [Habit::class], version = 2, exportSchema = false)
 abstract class HabitDatabase: RoomDatabase() {
     abstract fun habitDao() : HabitDao
     companion object{

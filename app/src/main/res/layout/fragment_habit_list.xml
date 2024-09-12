@@ -5,11 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.habitlist.HabitList">
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="50dp"
+        android:text="Make sure you check all your habits for the day !"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+    <ProgressBar
+        android:id="@+id/progressBarHabits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_below="@id/progress_text"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/custom_progress_drawable"
+        android:progress="0"
+        android:max="100"/>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeToRefresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/progressBarHabits">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_habits"

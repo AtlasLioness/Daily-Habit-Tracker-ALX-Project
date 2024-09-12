@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#26A69A"
-                android:hint="Habit title"
+                android:hint="Change habit title"
                 android:inputType="text"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#26A69A"
-                android:hint="Give it a short description"
+                android:hint="Change description"
                 android:inputType="textShortMessage"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
@@ -50,7 +50,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="Pick a date"
+                android:text="Change date"
                 android:textColor="@android:color/white" />
 
             <TextView
@@ -93,7 +93,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="Confirm"
+                android:text="Update"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>

@@ -22,4 +22,10 @@ interface HabitDao {
 
     @Query (value = "SELECT * FROM habit_table ORDER BY id DESC")
     fun getAllHabits(): LiveData<List<Habit>>
+
+    @Query("SELECT * FROM habit_table WHERE id = :id")
+    suspend fun getHabitById(id: Int): Habit?
+
+    @Query("DELETE FROM habit_table")
+    suspend fun deleteAll()
 }

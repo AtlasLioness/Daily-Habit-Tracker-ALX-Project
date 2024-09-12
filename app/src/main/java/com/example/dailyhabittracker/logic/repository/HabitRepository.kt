@@ -18,4 +18,13 @@ class HabitRepository (private val habitDao: HabitDao) {
     suspend fun deleteHabit(habit: Habit) {
         habitDao.deleteHabit(habit)
     }
+
+    suspend fun deleteAllHabits() {
+        habitDao.deleteAll()
+    }
+
+    // New method to get a habit by its ID
+    suspend fun getHabitById(id: Int): Habit? {
+        return habitDao.getHabitById(id)
+    }
 }

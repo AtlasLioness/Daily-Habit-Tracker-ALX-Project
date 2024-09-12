@@ -1,90 +1,76 @@
 package com.example.dailyhabittracker.utils
 
-import java.sql.Date
 import java.sql.Timestamp
+import java.text.ParseException
 import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 object Calculations {
 
-    //todo: Change it so it returns a string to display to the textView of the habit item
-    fun calculateTimeBetweenDates(startDate: String): String {
+    private val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault())
 
+    // Function to calculate time between a given startDate and the current time
+    fun calculateTimeBetweenDates(startDate: String): String {
         val endDate = timeStampToString(System.currentTimeMillis())
 
-        val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm")
-        val date1 = sdf.parse(startDate)
-        val date2 = sdf.parse(endDate)
+        return try {
+            val date1 = sdf.parse(startDate) ?: return "Invalid start date"
+            val date2 = sdf.parse(endDate) ?: return "Invalid current date"
 
-        var isNegative = false
+            var difference = date2.time - date1.time
+            var isNegative = false
 
-        var difference = date2.time - date1.time
-        if (difference < 0) {
-            difference = -(difference)
-            isNegative = true
-        }
-
-        val minutes = difference / 60 / 1000
-        val hours = difference / 60 / 1000 / 60
-        val days = (difference / 60 / 1000 / 60) / 24
-        val months = (difference / 60 / 1000 / 60) / 24 / (365 / 12)
-        val years = difference / 60 / 1000 / 60 / 24 / 365
-
-        if (isNegative) {
-
-            return when {
-                minutes < 240 -> "Starts in $minutes minutes"
-                hours < 48 -> "Starts in $hours hours"
-                days < 61 -> "Starts in $days days"
-                months < 24 -> "Starts in $months months"
-                else -> "Starts in $years years"
+            if (difference < 0) {
+                difference = -difference
+                isNegative = true
             }
-        }
 
-        return when {
-            minutes < 240 -> "$minutes minutes ago"
-            hours < 48 -> "$hours hours ago"
-            days < 61 -> "$days days ago"
-            months < 24 -> "$months months ago"
-            else -> "$years years ago"
+            val minutes = difference / (60 * 1000)
+            val hours = difference / (60 * 60 * 1000)
+            val days = difference / (24 * 60 * 60 * 1000)
+            val months = days / 30 // Approximate month length
+            val years = days / 365 // Approximate year length
+
+            if (isNegative) {
+                when {
+                    minutes < 240 -> "Starts in $minutes minutes"
+                    hours < 48 -> "Starts in $hours hours"
+                    days < 61 -> "Starts in $days days"
+                    months < 24 -> "Starts in $months months"
+                    else -> "Starts in $years years"
+                }
+            } else {
+                when {
+                    minutes < 240 -> "$minutes minutes ago"
+                    hours < 48 -> "$hours hours ago"
+                    days < 61 -> "$days days ago"
+                    months < 24 -> "$months months ago"
+                    else -> "$years years ago"
+                }
+            }
+        } catch (e: ParseException) {
+            "Date parsing error"
         }
     }
 
+    // Convert a timestamp to a formatted date string
     private fun timeStampToString(timeStamp: Long): String {
-
         val stamp = Timestamp(timeStamp)
-        val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm")
-        val date = sdf.format(Date(stamp.time))
-
-        return date.toString()
+        return sdf.format(Date(stamp.time))
     }
 
+    // Format day, month, and year into a string
     fun cleanDate(_day: Int, _month: Int, _year: Int): String {
-        var day = _day.toString()
-        var month = _month.toString()
-
-        if (_day < 10) {
-            day = "0$_day"
-        }
-
-        if (_month < 9) { //Because the month instance we retrieve starts at 0 and it's stupid!
-            month = "0${_month + 1}"
-        } else if (_month >= 9 && _month <= 11) {
-            month = (_month + 1).toString()
-        }
-
+        val day = _day.toString().padStart(2, '0')
+        val month = (_month + 1).toString().padStart(2, '0')
         return "$day/$month/$_year"
     }
 
+    // Format hour and minute into a string
     fun cleanTime(_hour: Int, _minute: Int): String {
-        var hour = _hour.toString()
-        var minute = _minute.toString()
-
-        if (_hour < 10) {
-            hour = "0$_hour"
-        }
-        if (_minute < 10) {
-            minute = "0$_minute"
-        }
+        val hour = _hour.toString().padStart(2, '0')
+        val minute = _minute.toString().padStart(2, '0')
         return "$hour:$minute"
     }
 }

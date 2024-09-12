@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -74,6 +72,7 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -128,6 +127,9 @@ dependencies {
 
     //Coil to show external images
     implementation("io.coil-kt:coil-compose:2.6.0")
+
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.8.0")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.8.0")
 
 
 
