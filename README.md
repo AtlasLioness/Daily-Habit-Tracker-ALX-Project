@@ -1,7 +1,3 @@
-Here’s a template for your app’s `README.md` file that you can modify as needed:
-
----
-
 # Dailio - Your Daily Habit Tracker
 
 **Dailio** is an intuitive and simple-to-use habit tracker that helps you track, manage, and achieve your daily goals. Whether you want to form new habits or break old ones, Dailio provides a seamless and motivating experience to stay on top of your daily tasks.
