@@ -5,16 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.habitlist.HabitList">
+
     <TextView
         android:id="@+id/progress_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="2dp"
         android:layout_marginTop="50dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Make sure you check all your habits for the day !"
+        android:textColor="@android:color/black"
         android:textSize="16sp"
-        android:textColor="@android:color/black" />
+        android:textStyle="bold" />
     <ProgressBar
         android:id="@+id/progressBarHabits"
         android:layout_width="match_parent"
@@ -60,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="It's time to add your first daily habit! "
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
         android:textStyle="italic"
         android:visibility="gone" />
