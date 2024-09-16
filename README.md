@@ -48,8 +48,9 @@ git clone https://github.com/your-username/dailio.git
 3.  **Track Progress**: Monitor your daily progress from the home screen. Aim to fill the progress bar completely by the end of each day.
 
 ## Release
-Dailio - Daily Habit Tracker v1
-[Download the APK]([https://github.com/AtlasLioness/Daily-Habit-Tracker-ALX-Project/blob/039fe4e07f344ebdb18242bfde830c604cdbf49d/app/release/app-release.apk](https://github.com/AtlasLioness/Daily-Habit-Tracker-ALX-Project/releases/tag/v1.0.0))
+Dailio - Daily Habit Tracker v1.0.0
+[Official release page](https://github.com/AtlasLioness/Daily-Habit-Tracker-ALX-Project/releases/tag/v1.0.0)
+[Download the APK](https://github.com/AtlasLioness/Daily-Habit-Tracker-ALX-Project/releases/download/v1.0.0/app-release.apk)
 
 
 ## Contributing
