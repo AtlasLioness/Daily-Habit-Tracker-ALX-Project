@@ -37,9 +37,14 @@ git clone https://github.com/your-username/dailio.git
 
 ## Usage
 
-1. **Create a Habit**: Tap on the "Add Habit" button, fill in the details like habit name and target, and save.
+1. **Create a Habit**: Tap on the "Add Habit" button, fill in the details like habit name, description, starting date/time, and save.
 2. **Update a Habit**: Tap on a habit to edit its title, description, time and date.
-3.  **Track Progress**: View your progress on the home screen with a daily and weekly overview.
+3.  **Track Progress**: Monitor your daily progress from the home screen. Aim to fill the progress bar completely by the end of each day.
+
+## Release
+Dailio - Daily Habit Tracker v1
+[Download the APK](https://github.com/AtlasLioness/Daily-Habit-Tracker-ALX-Project/blob/039fe4e07f344ebdb18242bfde830c604cdbf49d/app/release/app-release.apk)
+
 
 ## Contributing
 
