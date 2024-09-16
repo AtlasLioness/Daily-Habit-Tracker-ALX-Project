@@ -49,7 +49,7 @@ git clone https://github.com/your-username/dailio.git
 
 ## Release
 Dailio - Daily Habit Tracker v1
-[Download the APK](https://github.com/AtlasLioness/Daily-Habit-Tracker-ALX-Project/blob/039fe4e07f344ebdb18242bfde830c604cdbf49d/app/release/app-release.apk)
+[Download the APK]([https://github.com/AtlasLioness/Daily-Habit-Tracker-ALX-Project/blob/039fe4e07f344ebdb18242bfde830c604cdbf49d/app/release/app-release.apk](https://github.com/AtlasLioness/Daily-Habit-Tracker-ALX-Project/releases/tag/v1.0.0))
 
 
 ## Contributing
