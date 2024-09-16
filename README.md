@@ -2,6 +2,12 @@
 
 **Dailio** is an intuitive and simple-to-use habit tracker that helps you track, manage, and achieve your daily goals. Whether you want to form new habits or break old ones, Dailio provides a seamless and motivating experience to stay on top of your daily tasks.
 
+## The Story Behind the Project  
+
+Growing up, I always had a hard time sticking to a healthy daily routine. Whether it was remembering to eat breakfast, meditate, or just take a break from work, I often lost track and ended up quitting halfway. I knew I needed something to help me stay on top of these habits, so I decided to build an app that could do just that. I wanted something simple that would keep me accountable and remind me to stick with it each day, even if the tasks felt small.
+
+That’s how the Daily Habit Tracker app came to be. It’s all about making habit-building easier and more fun. I genuinely believe that good habits are key to achieving any goal, and this app is my way of helping myself—and anyone else—stay on track.
+
 ## Features
 
 - **Easy Habit Tracking**: Add and monitor your daily habits in an intuitive interface.
