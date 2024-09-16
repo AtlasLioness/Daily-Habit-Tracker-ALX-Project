@@ -63,7 +63,3 @@ Contributions are welcome! If you’d like to suggest new features, report bugs,
 3. Make your changes and commit: `git commit -m "Add new feature"`.
 4. Push to the branch: `git push origin feature-branch-name`.
 5. Submit a pull request.
-
----
-
-This template covers the essential sections of a `README.md` for your app. You can modify the content to fit the details of your project.
